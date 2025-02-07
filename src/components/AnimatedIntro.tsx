@@ -4,22 +4,29 @@ import colors from "../constants/colors"
 import styled from "styled-components"
 import { useEffect } from "react"
 
-export default function AnimatedIntro() {
+type Props = {
+  onAnimationComplete: () => void
+}
+
+export default function AnimatedIntro({ onAnimationComplete }: Readonly<Props>) {
   const lineControl = useAnimation()
   const titleControl = useAnimation()
   const detailControl = useAnimation()
 
   useEffect(() => {
     const sequence = async () => {
-      // Full time: 2000ms
-      await new Promise((resolve) => setTimeout(resolve, 600))
+      // Full time: 2200ms
+      await new Promise((resolve) => setTimeout(resolve, 500))
       await lineControl.start({ width: "110%", transition: { duration: 0.3 } })
       await titleControl.start({ y: 0, opacity: 1, transition: { duration: 0.4 } })
       await detailControl.start({ y: 30, opacity: 1, transition: { duration: 0.4 } })
       await lineControl.start({ width: "0%", transition: { duration: 0.3 } })
+      await new Promise((resolve) => setTimeout(resolve, 300))
+      onAnimationComplete()
     }
+    
     sequence()
-  }, [lineControl, titleControl, detailControl])
+  }, [lineControl, titleControl, detailControl, onAnimationComplete])
 
   return (
     <MainContainer>

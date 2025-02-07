@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import colors from "../constants/colors"
 import { createGlobalStyle } from "styled-components"
@@ -7,6 +7,13 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Calibri Light', 'SF Mono', 'Script MT Bold';
     background-color: ${colors.background};
+  }
+
+  button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
   }
 
   html, body, div, span, applet, object, iframe,
