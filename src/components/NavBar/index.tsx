@@ -4,7 +4,11 @@ import NavPopButton from "../PopButton"
 import { motion } from "motion/react"
 import styled from "styled-components"
 
-export default function NavBar() {
+type Props = {
+  aboutRef: React.RefObject<HTMLDivElement>
+}
+
+export default function NavBar({ aboutRef }: Readonly<Props>) {
   const containerVariants = { visible: { transition: { staggerChildren: 0.07 } } }
 
   const itemVariants = {
@@ -12,12 +16,18 @@ export default function NavBar() {
     visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } }
   }
 
+  const scrollToRef = (ref: React.RefObject<HTMLDivElement>) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
     <MainContainer initial="hidden" animate="visible" variants={containerVariants}>
       <NavLogo onClick={() => console.log("Top")} variants={itemVariants} />
 
       <ButtonsContainer>
-        <NavButton onClick={() => console.log("About")} variants={itemVariants} order={1}>
+        <NavButton onClick={() => scrollToRef(aboutRef)} variants={itemVariants} order={1}>
           About
         </NavButton>
 

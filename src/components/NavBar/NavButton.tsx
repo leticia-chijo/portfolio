@@ -14,7 +14,7 @@ type Props = {
 export default function NavButton({ children, order, variants, onClick }: Readonly<Props>) {
   return (
     <MainContainer onClick={onClick} variants={variants}>
-      <Text>{order}. </Text>
+      <Text>0{order}. </Text>
       {children}
     </MainContainer>
   )
