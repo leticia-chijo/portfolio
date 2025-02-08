@@ -1,8 +1,11 @@
 import { useCallback, useRef, useState } from "react"
 
-import AboutMe from "./components/AboutMe"
+import AboutMe from "./components/Sections/AboutMe"
 import AnimatedIntro from "./components/AnimatedIntro"
-import NavBar from "./components/NavBar"
+import Experiences from "./components/Sections/Experiences"
+import NavBar from "./components/NavBar/NavBar"
+import SectionWrapper from "./components/Sections/SectionWrapper"
+import { motion } from "framer-motion"
 import styled from "styled-components"
 
 export default function App() {
@@ -10,6 +13,7 @@ export default function App() {
   const [showContent, setShowContent] = useState(false)
 
   const aboutRef = useRef<HTMLDivElement>(null!)
+  const experiencesRef = useRef<HTMLDivElement>(null!)
 
   const changeNav = useCallback(() => {
     setShowNav(true)
@@ -18,11 +22,16 @@ export default function App() {
 
   return (
     <MainContainer $showNav={showNav}>
-      {showNav && <NavBar aboutRef={aboutRef} />}
+      {showNav && <NavBar aboutRef={aboutRef} experiencesRef={experiencesRef} />}
       <AnimatedIntro onAnimationComplete={changeNav} />
       {showContent && (
-        <ContentContainer>
-          <AboutMe ref={aboutRef} />
+        <ContentContainer initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2 }}>
+          <SectionWrapper ref={aboutRef} headerOrder={1} headerText="About Me">
+            <AboutMe />
+          </SectionWrapper>
+          <SectionWrapper ref={experiencesRef} headerOrder={2} headerText="Where I've Worked">
+            <Experiences/>
+          </SectionWrapper>
         </ContentContainer>
       )}
     </MainContainer>
@@ -36,8 +45,9 @@ const MainContainer = styled.div<{ $showNav: boolean }>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 500px; /*REMOVE*/
 `
-const ContentContainer = styled.div`
+const ContentContainer = styled(motion.div)`
   width: 75%;
   display: flex;
   flex-direction: column;

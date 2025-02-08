@@ -1,4 +1,4 @@
-import { Variants, motion } from "motion/react"
+import { Variants, motion } from "framer-motion"
 
 import colors from "../../constants/colors"
 import logo from "../../assets/images/logo_letters.png"

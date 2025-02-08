@@ -1,4 +1,4 @@
-import colors from "../constants/colors"
+import colors from "../../constants/colors"
 import styled from "styled-components"
 
 type Props = {
@@ -23,14 +23,14 @@ const MainContainer = styled.div`
   margin-top: 80px;
   margin-bottom: 20px;
 `
-const Order = styled.h2`
+const Order = styled.h3`
   display: inline-block;
   font-family: "SF Mono", monospace;
   font-size: 24px;
   color: ${colors.primary};
   margin-right: 8px;
 `
-const Title = styled.h2`
+const Title = styled.h3`
   display: inline-block;
   font-family: "Calibri Light", sans-serif;
   font-size: 28px;

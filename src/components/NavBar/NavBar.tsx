@@ -1,14 +1,15 @@
 import NavButton from "./NavButton"
 import NavLogo from "./NavLogo"
 import NavPopButton from "../PopButton"
-import { motion } from "motion/react"
+import { motion } from "framer-motion"
 import styled from "styled-components"
 
 type Props = {
   aboutRef: React.RefObject<HTMLDivElement>
+  experiencesRef: React.RefObject<HTMLDivElement>
 }
 
-export default function NavBar({ aboutRef }: Readonly<Props>) {
+export default function NavBar({ aboutRef, experiencesRef }: Readonly<Props>) {
   const containerVariants = { visible: { transition: { staggerChildren: 0.07 } } }
 
   const itemVariants = {
@@ -31,7 +32,7 @@ export default function NavBar({ aboutRef }: Readonly<Props>) {
           About
         </NavButton>
 
-        <NavButton onClick={() => console.log("Experience")} variants={itemVariants} order={2}>
+        <NavButton onClick={() => scrollToRef(experiencesRef)} variants={itemVariants} order={2}>
           Experience
         </NavButton>
 

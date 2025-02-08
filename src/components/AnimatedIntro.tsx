@@ -1,4 +1,4 @@
-import { motion, useAnimation } from "motion/react"
+import { motion, useAnimation } from "framer-motion"
 
 import colors from "../constants/colors"
 import styled from "styled-components"
@@ -31,13 +31,13 @@ export default function AnimatedIntro({ onAnimationComplete }: Readonly<Props>) 
   return (
     <MainContainer>
       <TitleContainer initial={{ y: 30, opacity: 0 }} animate={titleControl}>
-        Letícia Chijo
+        <h1>Letícia Chijo</h1>
       </TitleContainer>
 
       <Line initial={{ width: "0%" }} animate={lineControl} />
 
       <DescriptionContainer initial={{ y: -30, opacity: 0 }} animate={titleControl}>
-        Software Engineer & Coding Teacher
+        <h2>Software Engineer & Coding Teacher</h2>
       </DescriptionContainer>
     </MainContainer>
   )

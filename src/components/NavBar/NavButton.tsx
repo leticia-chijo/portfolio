@@ -1,4 +1,4 @@
-import { Variants, motion } from "motion/react"
+import { Variants, motion } from "framer-motion"
 
 import { ReactNode } from "react"
 import colors from "../../constants/colors"
