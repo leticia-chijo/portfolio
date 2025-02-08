@@ -40,12 +40,11 @@ export default function App() {
 
 const MainContainer = styled.div<{ $showNav: boolean }>`
   width: calc(100% - 100px);
-  margin: ${(props) => (props.$showNav ? 20 : 70)}px 40px;
+  margin: 70px 40px 300px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 500px; /*REMOVE*/
 `
 const ContentContainer = styled(motion.div)`
   width: 75%;
