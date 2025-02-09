@@ -11,8 +11,9 @@ export default function AboutMe() {
           mobile, and full-stack development.
         </p>
         <p>
-          I graduated in <strong>Computer Engineering</strong> and began my career at a software factory, developing
-          over 20 applications and collaborating with the design team to create the company's design system.
+          I graduated in <strong>Computer Engineering</strong> at University of São Paulo (USP) and began my career at a
+          software factory, developing over 20 applications and collaborating with the design team to create the
+          company's design system.
         </p>
         <p>
           After that, I co-founded the no-code platform Atlantica and later transitioned to{" "}
