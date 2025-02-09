@@ -17,7 +17,8 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 600px;
+  margin-top: 450px;
+  margin-bottom: 140px;
 `
 const Line = styled.div`
   height: 1px;
@@ -30,6 +31,7 @@ const Text = styled.a`
   font-family: "SF Mono", monospace;
   color: ${colors.textRegular};
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
   &:hover {
     color: ${colors.primary};
   }

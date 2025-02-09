@@ -1,3 +1,4 @@
+import { EMAIL } from "../../constants/urls"
 import PopButton from "../PopButton"
 import colors from "../../constants/colors"
 import styled from "styled-components"
@@ -6,10 +7,10 @@ export default function Contact() {
   return (
     <MainContainer>
       <p>
-        I am currently <strong>looking for any new opportunities</strong>, so my inbox is always open. Whether you have a question or
-        just want to say hi, I'll try my best to get back to you as soon as possible!
+        I am currently <strong>looking for any new opportunities</strong>, so my inbox is always open. Whether you have
+        a question or just want to say hi, I'll try my best to get back to you as soon as possible!
       </p>
-      <PopButton onClick={() => (window.location.href = "mailto:leticia.chijo@gmail.com")}>
+      <PopButton onClick={() => (window.location.href = `mailto:${EMAIL}`)}>
         <div>Say Hello!</div>
       </PopButton>
     </MainContainer>

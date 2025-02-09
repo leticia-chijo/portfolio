@@ -23,6 +23,7 @@ export default function NavButton({ children, order, variants, onClick }: Readon
 const MainContainer = styled(motion.button)`
   font-family: "SF Mono", monospace;
   color: ${colors.textRegular};
+  transition: color 0.3s ease-in-out;
   &:hover {
     color: ${colors.primary};
   }
