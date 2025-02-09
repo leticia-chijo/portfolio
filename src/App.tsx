@@ -23,8 +23,10 @@ export default function App() {
 
   const changeNav = useCallback(() => {
     setShowNav(true)
-    setShowContent(true)
-    setShowBottom(true)
+    setTimeout(() => {
+      setShowContent(true)
+      setShowBottom(true)
+    }, 700)
   }, [])
 
   return (

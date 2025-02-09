@@ -71,7 +71,7 @@ const List = styled.ul`
     font-weight: 600;
     background-color: ${colors.primary}08;
     color: ${colors.primary};
-    border: 2px solid ${colors.primary};
+    border: 1px solid ${colors.primary};
     border-radius: 30px;
     padding: 8px 16px;
     margin: 4px;

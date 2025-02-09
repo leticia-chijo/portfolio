@@ -46,7 +46,7 @@ const MainContainer = styled(motion.div)<{ $isOpened: boolean }>`
   overflow: hidden;
   width: 90%;
   padding: 16px;
-  border: 2px solid ${colors.primary};
+  border: 1px solid ${colors.primary};
   border-radius: 20px;
   background-color: ${colors.primary}08;
   display: flex;
