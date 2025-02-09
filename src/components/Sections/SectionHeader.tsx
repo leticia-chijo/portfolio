@@ -21,7 +21,7 @@ const MainContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 80px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 `
 const Order = styled.h3`
   display: inline-block;

@@ -1,6 +1,7 @@
 import NavButton from "./NavButton"
 import NavLogo from "./NavLogo"
 import NavPopButton from "../PopButton"
+import { RESUME_URL } from "../../constants/urls"
 import colors from "../../constants/colors"
 import { motion } from "framer-motion"
 import styled from "styled-components"
@@ -8,9 +9,10 @@ import styled from "styled-components"
 type Props = {
   aboutRef: React.RefObject<HTMLDivElement>
   experiencesRef: React.RefObject<HTMLDivElement>
+  contactRef: React.RefObject<HTMLDivElement>
 }
 
-export default function NavBar({ aboutRef, experiencesRef }: Readonly<Props>) {
+export default function NavBar({ aboutRef, experiencesRef, contactRef }: Readonly<Props>) {
   const containerVariants = { visible: { transition: { staggerChildren: 0.07 } } }
 
   const itemVariants = {
@@ -41,11 +43,11 @@ export default function NavBar({ aboutRef, experiencesRef }: Readonly<Props>) {
           Experience
         </NavButton>
 
-        <NavButton onClick={() => console.log("Contact")} variants={itemVariants} order={3}>
+        <NavButton onClick={() => scrollToRef(contactRef)} variants={itemVariants} order={3}>
           Contact
         </NavButton>
 
-        <NavPopButton onClick={() => console.log("Resume")} variants={itemVariants}>
+        <NavPopButton onClick={() => window.open(RESUME_URL, "_blank")} variants={itemVariants}>
           Resume
         </NavPopButton>
       </ButtonsContainer>

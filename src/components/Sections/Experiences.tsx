@@ -30,6 +30,7 @@ const MainContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  margin-top: 10px;
 `
 const TasksList = styled.ul`
   list-style: disc;

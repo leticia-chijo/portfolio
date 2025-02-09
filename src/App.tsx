@@ -2,6 +2,7 @@ import { useCallback, useRef, useState } from "react"
 
 import AboutMe from "./components/Sections/AboutMe"
 import AnimatedIntro from "./components/AnimatedIntro"
+import Contact from "./components/Sections/Contact"
 import Experiences from "./components/Sections/Experiences"
 import NavBar from "./components/NavBar/NavBar"
 import SectionWrapper from "./components/Sections/SectionWrapper"
@@ -14,6 +15,7 @@ export default function App() {
 
   const aboutRef = useRef<HTMLDivElement>(null!)
   const experiencesRef = useRef<HTMLDivElement>(null!)
+  const contactRef = useRef<HTMLDivElement>(null!)
 
   const changeNav = useCallback(() => {
     setShowNav(true)
@@ -22,7 +24,7 @@ export default function App() {
 
   return (
     <MainContainer $showNav={showNav}>
-      {showNav && <NavBar aboutRef={aboutRef} experiencesRef={experiencesRef} />}
+      {showNav && <NavBar aboutRef={aboutRef} experiencesRef={experiencesRef} contactRef={contactRef} />}
       <AnimatedIntro onAnimationComplete={changeNav} />
       {showContent && (
         <ContentContainer initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2 }}>
@@ -30,7 +32,10 @@ export default function App() {
             <AboutMe />
           </SectionWrapper>
           <SectionWrapper ref={experiencesRef} headerOrder={2} headerText="Where I've Worked">
-            <Experiences/>
+            <Experiences />
+          </SectionWrapper>
+          <SectionWrapper ref={contactRef} headerOrder={3} headerText="Get In Touch">
+            <Contact />
           </SectionWrapper>
         </ContentContainer>
       )}
