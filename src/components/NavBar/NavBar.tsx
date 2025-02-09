@@ -69,6 +69,9 @@ const MainContainer = styled(motion.div)`
   left: 0;
   z-index: 1;
   background: linear-gradient(0, ${colors.background}00, ${colors.background} 20%);
+  @media (max-width: 560px) {
+    padding: 16px 20px;
+  }
 `
 const ButtonsContainer = styled.div`
   display: flex;

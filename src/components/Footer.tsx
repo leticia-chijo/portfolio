@@ -58,6 +58,7 @@ const Text = styled.a`
   }
   @media (max-width: 720px) {
     font-size: 16px;
+    margin: 0 20px;
   }
 `
 const SocialsContainer = styled.div`
