@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Calibri Light', 'SF Mono', 'Script MT Bold';
     background-color: ${colors.background};
-    overflow: scroll;
+    overflow-y: scroll;
   }
 
   button {

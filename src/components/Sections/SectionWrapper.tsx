@@ -28,6 +28,7 @@ const MainContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  margin-bottom: 10px;
   & > div {
     width: 100%;
     display: flex;

@@ -4,6 +4,7 @@ import AboutMe from "./components/Sections/AboutMe"
 import AnimatedIntro from "./components/AnimatedIntro"
 import Contact from "./components/Sections/Contact"
 import Experiences from "./components/Sections/Experiences"
+import Footer from "./components/Footer"
 import NavBar from "./components/NavBar/NavBar"
 import SectionWrapper from "./components/Sections/SectionWrapper"
 import { motion } from "framer-motion"
@@ -37,6 +38,7 @@ export default function App() {
           <SectionWrapper ref={contactRef} headerOrder={3} headerText="Get In Touch">
             <Contact />
           </SectionWrapper>
+          <Footer />
         </ContentContainer>
       )}
     </MainContainer>
@@ -45,7 +47,7 @@ export default function App() {
 
 const MainContainer = styled.div<{ $showNav: boolean }>`
   width: calc(100% - 100px);
-  margin: 70px 40px 300px 40px;
+  margin: 70px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
