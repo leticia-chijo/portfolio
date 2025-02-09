@@ -1,7 +1,8 @@
 type Experience = {
   company: string
   position: string
-  period: string
+  startDate: string
+  endDate: string
   tasks: string[]
   technologies: string[]
 }
@@ -10,7 +11,8 @@ export const experiences: Experience[] = [
   {
     company: "Driven",
     position: "Full Stack Software Instructor",
-    period: "Jul 2022 - Nov 2024",
+    startDate: "Jul 2022",
+    endDate: "Nov 2024",
     tasks: [
       "Taught front-end and back-end development in live classes, covering coding skills and best practices.",
       "Restructured several course modules, developing new lessons, projects, and educational materials to enhance the student experience.",
@@ -39,8 +41,9 @@ export const experiences: Experience[] = [
   },
   {
     company: "Labenu",
-    position: "Front End Instructor and Course Coordinator",
-    period: "Jul 2020 - Jul 2022",
+    position: "Front End Instructor & Coordinator",
+    startDate: "Jul 2020",
+    endDate: "Jul 2022",
     tasks: [
       "Taught front-end development in live classes for over 20 groups, covering coding skills and best practices.",
       "Restructured the whole front-end course, developing new lessons, projects, and educational materials to enhance student learning.",
@@ -67,8 +70,9 @@ export const experiences: Experience[] = [
   },
   {
     company: "Atlantica App",
-    position: "Co-Founder and Software Engineer",
-    period: "Jan 2020 - Sep 2022",
+    position: "Co-Founder & Software Engineer",
+    startDate: "Jan 2020",
+    endDate: "Sep 2022",
     tasks: [
       "Developed the no-code app creation platform using React, React Native, and Node.js.",
       "Participated in the product conception alongside the other co-founders of the company.",
@@ -95,7 +99,8 @@ export const experiences: Experience[] = [
   {
     company: "Outsmart",
     position: "Software Engineer",
-    period: "Jan 2018 - Sep 2020",
+    startDate: "Jan 2018",
+    endDate: "Sep 2020",
     tasks: [
       "Developed over 20 applications in areas such as e-commerce, social networks and digital medical records.",
       "Collaborated with the design team to create an internal Design System that accelerated product development.",
@@ -124,7 +129,8 @@ export const experiences: Experience[] = [
   {
     company: "POLI-USP",
     position: "Undergraduate Research",
-    period: "Jan 2015 - Dez 2016",
+    startDate: "Jan 2015",
+    endDate: "Dez 2016",
     tasks: [
       "Developed a method to estimate urban traffic speed using flow count data and bus tracking in a SQL database from SPTrans.",
       "Created lessons for a hands-on laboratory on Intelligent Transportation Systems (ITS) and Geographic Information Systems in Transportation (GIS-T) for undergraduate and graduate courses in civil engineering. The lessons cover SQL concepts and data insertion into traffic simulation tools, such as VISSIM.",

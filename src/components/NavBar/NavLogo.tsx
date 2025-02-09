@@ -31,4 +31,8 @@ const Logo = styled(motion.img)`
   border: 2px solid ${colors.primary};
   border-radius: 50px;
   background-color: ${colors.background};
+  @media (max-width: 560px) {
+    width: 40px;
+    height: 40px;
+  }
 `

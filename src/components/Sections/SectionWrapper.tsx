@@ -29,10 +29,4 @@ const MainContainer = styled.div`
   align-items: flex-start;
   justify-content: center;
   margin-bottom: 10px;
-  & > div {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
 `

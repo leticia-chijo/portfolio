@@ -1,3 +1,4 @@
+import { HideElementMobile } from "../../styles/Mobile"
 import { ReactNode } from "react"
 import colors from "../../constants/colors"
 import styled from "styled-components"
@@ -9,10 +10,12 @@ type Props = {
 
 export default function VerticalBar({ children, side }: Readonly<Props>) {
   return (
-    <MainContainer $side={side}>
-      {children}
-      <Line />
-    </MainContainer>
+    <HideElementMobile>
+      <MainContainer $side={side}>
+        {children}
+        <Line />
+      </MainContainer>
+    </HideElementMobile>
   )
 }
 
@@ -31,4 +34,7 @@ const Line = styled.div`
   height: 150px;
   width: 2px;
   background-color: ${colors.textRegular};
+  @media (max-height: 500px) {
+    height: 0;
+  }
 `

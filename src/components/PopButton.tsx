@@ -25,6 +25,7 @@ export default function PopButton({ children, variants, onClick }: Readonly<Prop
 
 const ResumeButton = styled(motion.button)`
   font-family: "SF Mono", monospace;
+  font-size: 16px;
   padding: 8px 12px;
   box-sizing: border-box;
   border: 2px solid ${colors.primary};

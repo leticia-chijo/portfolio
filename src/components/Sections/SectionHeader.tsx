@@ -22,6 +22,10 @@ const MainContainer = styled.div`
   justify-content: center;
   margin-top: 80px;
   margin-bottom: 30px;
+  @media (max-width: 720px) {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
 `
 const Order = styled.h3`
   display: inline-block;
@@ -29,6 +33,9 @@ const Order = styled.h3`
   font-size: 24px;
   color: ${colors.primary};
   margin-right: 8px;
+  @media (max-width: 720px) {
+    font-size: 20px;
+  }
 `
 const Title = styled.h3`
   display: inline-block;
@@ -37,6 +44,9 @@ const Title = styled.h3`
   font-weight: 700;
   color: ${colors.textAccent};
   position: relative;
+  @media (max-width: 720px) {
+    font-size: 22px;
+  }
 `
 const Line = styled.div`
   display: inline-block;

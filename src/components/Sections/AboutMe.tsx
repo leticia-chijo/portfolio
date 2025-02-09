@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 export default function AboutMe() {
   return (
-    <>
+    <MainContainer>
       <TextContainer>
         <p>
           Hello! I'm Letícia, a software engineer with <strong>over seven years of experience</strong> in front-end,
@@ -39,9 +39,18 @@ export default function AboutMe() {
       </TextContainer>
 
       <Image src={photo} alt="Picture of a woman smiling" />
-    </>
+    </MainContainer>
   )
 }
+const MainContainer = styled.div`
+  display: flex;
+  @media (max-width: 1200px) {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+`
 const TextContainer = styled.div`
   flex-grow: 1;
   p {
@@ -51,6 +60,11 @@ const TextContainer = styled.div`
     line-height: 30px;
     color: ${colors.textRegular};
     margin-bottom: 12px;
+    @media (max-width: 1200px) {
+      line-height: 24px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
   }
   strong {
     color: ${colors.primary};
@@ -61,6 +75,15 @@ const Image = styled.img`
   height: 300px;
   border-radius: 150px;
   margin-left: 30px;
+  @media (max-width: 1200px) {
+    margin-bottom: 30px;
+  }
+  @media (max-width: 720px) {
+    width: 200px;
+    height: 200px;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
 `
 const List = styled.ul`
   margin: -4px;
@@ -75,5 +98,11 @@ const List = styled.ul`
     border-radius: 30px;
     padding: 8px 16px;
     margin: 4px;
+  }
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 12px 0;
   }
 `

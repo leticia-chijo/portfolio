@@ -1,3 +1,4 @@
+import { HideElementMobile } from "../../styles/Mobile"
 import NavButton from "./NavButton"
 import NavLogo from "./NavLogo"
 import NavPopButton from "../PopButton"
@@ -35,18 +36,19 @@ export default function NavBar({ aboutRef, experiencesRef, contactRef }: Readonl
       <NavLogo onClick={scrollToTop} variants={itemVariants} />
 
       <ButtonsContainer>
-        <NavButton onClick={() => scrollToRef(aboutRef)} variants={itemVariants} order={1}>
-          About
-        </NavButton>
+        <HideElementMobile $break={560}>
+          <NavButton onClick={() => scrollToRef(aboutRef)} variants={itemVariants} order={1}>
+            About
+          </NavButton>
 
-        <NavButton onClick={() => scrollToRef(experiencesRef)} variants={itemVariants} order={2}>
-          Experience
-        </NavButton>
+          <NavButton onClick={() => scrollToRef(experiencesRef)} variants={itemVariants} order={2}>
+            Experience
+          </NavButton>
 
-        <NavButton onClick={() => scrollToRef(contactRef)} variants={itemVariants} order={3}>
-          Contact
-        </NavButton>
-
+          <NavButton onClick={() => scrollToRef(contactRef)} variants={itemVariants} order={3}>
+            Contact
+          </NavButton>
+        </HideElementMobile>
         <NavPopButton onClick={() => window.open(RESUME_URL, "_blank")} variants={itemVariants}>
           Resume
         </NavPopButton>
@@ -70,5 +72,10 @@ const MainContainer = styled(motion.div)`
 `
 const ButtonsContainer = styled.div`
   display: flex;
-  gap: 30px;
+  align-items: center;
+  @media (max-width: 560px) {
+    button {
+      font-size: 12px;
+    }
+  }
 `

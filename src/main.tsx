@@ -1,5 +1,5 @@
 import App from "./App.tsx"
-import { GlobalStyle } from "./styles/GlobalStyle.tsx"
+import { GlobalStyle } from "./styles/GlobalStyle.ts"
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 

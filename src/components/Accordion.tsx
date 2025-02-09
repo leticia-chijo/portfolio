@@ -1,3 +1,4 @@
+import { HideElementMobile, ShowElementMobile } from "../styles/Mobile"
 import { ReactNode, useState } from "react"
 
 import { MdOutlineKeyboardArrowDown } from "react-icons/md"
@@ -9,10 +10,11 @@ type Props = {
   children: ReactNode
   position: string
   company: string
-  period: string
+  startDate: string
+  endDate: string
 }
 
-export default function Accordion({ children, position, company, period }: Readonly<Props>) {
+export default function Accordion({ children, position, company, startDate, endDate }: Readonly<Props>) {
   const [isOpened, setIsOpened] = useState(false)
 
   return (
@@ -24,11 +26,22 @@ export default function Accordion({ children, position, company, period }: Reado
     >
       <TopContainer onClick={() => setIsOpened(!isOpened)}>
         <h4>
-          {position} <strong>@{company}</strong>
+          <HideElementMobile $break={950}>
+            {position} <strong>@</strong>
+          </HideElementMobile>
+          <strong>{company}</strong>
         </h4>
 
         <DateContainer>
-          <p>{period}</p>
+          <HideElementMobile $break={1100}>
+            <p>{startDate + " - " + endDate}</p>
+          </HideElementMobile>
+
+          <ShowElementMobile $break={1100}>
+            <p>{startDate}</p>
+            <p>{endDate}</p>
+          </ShowElementMobile>
+
           <motion.div animate={{ rotate: isOpened ? 180 : 0, y: isOpened ? -2 : 0 }} transition={{ duration: 0.3 }}>
             <MdOutlineKeyboardArrowDown color={colors.primary} size={26} />
           </motion.div>
@@ -36,6 +49,9 @@ export default function Accordion({ children, position, company, period }: Reado
       </TopContainer>
 
       <ContentContainer animate={{ opacity: isOpened ? 1 : 0 }} transition={{ duration: 0.2, ease: "easeInOut" }}>
+        <ShowElementMobile $break={950}>
+          <h5>{position}</h5>
+        </ShowElementMobile>
         {children}
       </ContentContainer>
     </MainContainer>
@@ -51,6 +67,12 @@ const MainContainer = styled(motion.div)<{ $isOpened: boolean }>`
   background-color: ${colors.primary}08;
   display: flex;
   flex-direction: column;
+  h4 {
+    font-family: "Calibri Light", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: ${colors.textAccent};
+  }
 `
 const TopContainer = styled.div`
   cursor: pointer;
@@ -59,12 +81,6 @@ const TopContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  h4 {
-    font-family: "Calibri Light", sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    color: ${colors.textAccent};
-  }
   strong {
     color: ${colors.primary};
   }
@@ -76,10 +92,19 @@ const DateContainer = styled.div`
   p {
     font-family: "SF Mono", monospace;
     font-size: 14px;
+    line-height: 16px;
     font-weight: 600;
     color: ${colors.textRegular};
   }
 `
 const ContentContainer = styled(motion.div)`
   margin: 8px 8px 0 8px;
+  h5 {
+    font-family: "Calibri Light", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: ${colors.textAccent};
+    margin: 8px 0;
+    font-size: 18px;
+  }
 `

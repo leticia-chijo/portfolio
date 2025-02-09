@@ -1,17 +1,12 @@
 import { EMAIL } from "../../constants/urls"
-import VerticalBar from "./VerticalBar"
 import colors from "../../constants/colors"
 import styled from "styled-components"
 
-export default function RightBar() {
-  return (
-    <VerticalBar side="right">
-      <Email onClick={() => (window.location.href = `mailto:${EMAIL}`)}>{EMAIL}</Email>
-    </VerticalBar>
-  )
+export default function EmailBar() {
+  return <Text onClick={() => (window.location.href = `mailto:${EMAIL}`)}>{EMAIL}</Text>
 }
 
-const Email = styled.p`
+const Text = styled.p`
   cursor: pointer;
   writing-mode: vertical-lr;
   letter-spacing: 2px;
@@ -21,5 +16,8 @@ const Email = styled.p`
   transition: color 0.3s ease-in-out;
   &:hover {
     color: ${colors.primary};
+  }
+  @media (max-width: 720px) {
+    writing-mode: unset;
   }
 `

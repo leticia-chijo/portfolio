@@ -22,7 +22,9 @@ export default function NavButton({ children, order, variants, onClick }: Readon
 
 const MainContainer = styled(motion.button)`
   font-family: "SF Mono", monospace;
+  font-size: 16px;
   color: ${colors.textRegular};
+  margin-right: 20px;
   transition: color 0.3s ease-in-out;
   &:hover {
     color: ${colors.primary};
@@ -31,4 +33,7 @@ const MainContainer = styled(motion.button)`
 const Text = styled.span`
   font-family: "SF Mono", monospace;
   color: ${colors.primary};
+  @media (max-width: 720px) {
+    display: none;
+  }
 `

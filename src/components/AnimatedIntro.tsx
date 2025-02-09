@@ -24,7 +24,7 @@ export default function AnimatedIntro({ onAnimationComplete }: Readonly<Props>) 
       await new Promise((resolve) => setTimeout(resolve, 300))
       onAnimationComplete()
     }
-    
+
     sequence()
   }, [lineControl, titleControl, detailControl, onAnimationComplete])
 
@@ -49,6 +49,9 @@ const MainContainer = styled.div`
   align-items: center;
   margin: 50px;
   position: relative;
+  @media (max-width: 660px) {
+    margin: 50px 10px;
+  }
 `
 const Line = styled(motion.div)`
   width: 0;
@@ -61,6 +64,15 @@ const TitleContainer = styled(motion.div)`
   font-size: 100px;
   font-family: "Script MT";
   color: ${colors.primary};
+  @media (max-width: 660px) {
+    font-size: 80px;
+  }
+  @media (max-width: 480px) {
+    font-size: 60px;
+  }
+  @media (max-width: 350px) {
+    font-size: 40px;
+  }
 `
 const DescriptionContainer = styled(motion.div)`
   font-size: 22px;
@@ -71,4 +83,19 @@ const DescriptionContainer = styled(motion.div)`
   left: 8px;
   top: 104px;
   color: ${colors.textAccent};
+  @media (max-width: 660px) {
+    font-size: 18px;
+    top: 84px;
+    left: 6px;
+  }
+  @media (max-width: 480px) {
+    font-size: 14px;
+    top: 64px;
+    left: 4px;
+  }
+  @media (max-width: 350px) {
+    font-size: 12px;
+    top: 44px;
+    left: 4px;
+  }
 `

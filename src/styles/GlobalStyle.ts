@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Calibri Light', 'SF Mono', 'Script MT Bold';
     background-color: ${colors.background};
     overflow-y: scroll;
+    max-width: 100vw;
   }
 
   button {

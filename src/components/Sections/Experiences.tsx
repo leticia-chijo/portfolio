@@ -7,7 +7,13 @@ export default function Experiences() {
   return (
     <MainContainer>
       {experiences.map((exp) => (
-        <Accordion key={exp.company} company={exp.company} position={exp.position} period={exp.period}>
+        <Accordion
+          key={exp.company}
+          company={exp.company}
+          position={exp.position}
+          startDate={exp.startDate}
+          endDate={exp.endDate}
+        >
           <TasksList>
             {exp.tasks.map((task) => (
               <li key={task}>{task}</li>

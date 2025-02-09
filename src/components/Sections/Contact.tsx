@@ -18,12 +18,11 @@ export default function Contact() {
 }
 
 const MainContainer = styled.div`
-  width: 90%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  margin: 0 20px;
+  gap: 20px;
   p {
-    width: 80%;
     font-family: "Calibri Light", sans-serif;
     font-size: 20px;
     font-weight: 600;
@@ -39,5 +38,12 @@ const MainContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  @media (max-width: 720px) {
+    flex-direction: column;
+    text-align: center;
+    p {
+      line-height: 24px;
+    }
   }
 `

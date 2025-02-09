@@ -3,12 +3,13 @@ import { useCallback, useRef, useState } from "react"
 import AboutMe from "./components/Sections/AboutMe"
 import AnimatedIntro from "./components/AnimatedIntro"
 import Contact from "./components/Sections/Contact"
+import EmailBar from "./components/VerticalBars/EmailBar"
 import Experiences from "./components/Sections/Experiences"
 import Footer from "./components/Footer"
-import LeftBar from "./components/VerticalBars/LeftBar"
 import NavBar from "./components/NavBar/NavBar"
-import RightBar from "./components/VerticalBars/RightBar"
 import SectionWrapper from "./components/Sections/SectionWrapper"
+import SocialsBar from "./components/VerticalBars/SocialsBar"
+import VerticalBar from "./components/VerticalBars/VerticalBar"
 import { motion } from "framer-motion"
 import styled from "styled-components"
 
@@ -48,8 +49,12 @@ export default function App() {
       )}
       {showBottom && (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}>
-          <LeftBar />
-          <RightBar />
+          <VerticalBar side={"left"}>
+            <SocialsBar />
+          </VerticalBar>
+          <VerticalBar side={"right"}>
+            <EmailBar />
+          </VerticalBar>
           <Footer />
         </motion.div>
       )}
@@ -58,12 +63,16 @@ export default function App() {
 }
 
 const MainContainer = styled.div<{ $showNav: boolean }>`
-  width: calc(100% - 100px);
+  width: calc(100% - 80px);
   margin: 70px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media (max-width: 720px) {
+    margin: 50px 20px;
+    width: calc(100% - 40px);
+  }
 `
 const ContentContainer = styled(motion.div)`
   width: 70%;
@@ -71,4 +80,7 @@ const ContentContainer = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media (max-width: 720px) {
+    width: 100%;
+  }
 `
