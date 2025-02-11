@@ -16,7 +16,6 @@ import styled from "styled-components"
 export default function App() {
   const [showNav, setShowNav] = useState(false)
   const [showContent, setShowContent] = useState(false)
-  const [showBottom, setShowBottom] = useState(false)
 
   const aboutRef = useRef<HTMLDivElement>(null!)
   const experiencesRef = useRef<HTMLDivElement>(null!)
@@ -24,10 +23,7 @@ export default function App() {
 
   const changeNav = useCallback(() => {
     setShowNav(true)
-    setTimeout(() => {
-      setShowContent(true)
-      setShowBottom(true)
-    }, 700)
+    setTimeout(() => setShowContent(true), 700)
   }, [])
 
   return (
@@ -45,10 +41,6 @@ export default function App() {
           <SectionWrapper ref={contactRef} headerOrder={3} headerText="Get In Touch">
             <Contact />
           </SectionWrapper>
-        </ContentContainer>
-      )}
-      {showBottom && (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2 }}>
           <VerticalBar side={"left"}>
             <SocialsBar />
           </VerticalBar>
@@ -56,7 +48,7 @@ export default function App() {
             <EmailBar />
           </VerticalBar>
           <Footer />
-        </motion.div>
+        </ContentContainer>
       )}
     </MainContainer>
   )

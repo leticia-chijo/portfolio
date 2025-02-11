@@ -10,10 +10,11 @@ const Text = styled.p`
   cursor: pointer;
   writing-mode: vertical-lr;
   letter-spacing: 2px;
-  font-size: 11px;
+  font-size: 14px;
   font-family: "SF Mono", monospace;
   color: ${colors.textRegular};
   transition: color 0.3s ease-in-out;
+  margin-bottom: -12px;
   &:hover {
     color: ${colors.primary};
   }

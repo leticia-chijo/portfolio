@@ -1,4 +1,5 @@
 import EmailBar from "./VerticalBars/EmailBar"
+import { GiHearts } from "react-icons/gi"
 import { PORTFOLIO_REPO_URL } from "../constants/urls"
 import { ShowElementMobile } from "../styles/Mobile"
 import SocialsBar from "./VerticalBars/SocialsBar"
@@ -16,7 +17,7 @@ export default function Footer() {
       </ShowElementMobile>
       <Line />
       <Text href={PORTFOLIO_REPO_URL} target="_blank">
-        Made with <strong>♥</strong> (and React) by Letícia Chijo
+        Made with <GiHearts color={colors.primary} size={14}/> (and React) by Letícia Chijo
       </Text>
     </MainContainer>
   )
@@ -27,8 +28,8 @@ const MainContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 450px;
-  margin-bottom: 140px;
+  margin-top: 500px;
+  margin-bottom: 90px;
   @media (max-width: 720px) {
     margin-top: 150px;
     margin-bottom: 0;
@@ -40,7 +41,7 @@ const Line = styled.div`
   background-color: ${colors.textRegular};
   margin-bottom: 30px;
   @media (max-width: 720px) {
-    margin-top: 30px;
+    margin-top: 40px;
   }
 `
 const Text = styled.a`
@@ -51,9 +52,6 @@ const Text = styled.a`
   transition: color 0.3s ease-in-out;
   text-align: center;
   &:hover {
-    color: ${colors.primary};
-  }
-  strong {
     color: ${colors.primary};
   }
   @media (max-width: 720px) {

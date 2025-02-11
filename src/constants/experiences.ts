@@ -15,10 +15,10 @@ export const experiences: Experience[] = [
     endDate: "Nov 2024",
     tasks: [
       "Taught front-end and back-end development in live classes, covering coding skills and best practices.",
-      "Restructured several course modules, developing new lessons, projects, and educational materials to enhance the student experience.",
+      "Restructured several course modules, developing new lessons, projects, and educational materials to enhance student experience.",
       "Created and taught a mini-course on back-end development with Java and Spring, expanding career opportunities for students.",
       "Participated in the creation of a new course with recorded lessons, adapting content and recording approximately 50 hours of video material.",
-      "Developed an internal BI platform to monitor student data from the recorded course, improving the direction of support and assistance."
+      "Developed an internal BI platform to monitor student data from recorded courses, improving support and assistance."
     ],
     technologies: [
       "HTML",
@@ -46,12 +46,12 @@ export const experiences: Experience[] = [
     endDate: "Jul 2022",
     tasks: [
       "Taught front-end development in live classes for over 20 groups, covering coding skills and best practices.",
-      "Restructured the whole front-end course, developing new lessons, projects, and educational materials to enhance student learning.",
+      "Restructured the entire front-end course, developing new lessons, projects, and educational materials to enhance student learning.",
       "Led the pedagogical team, guiding teachers and monitors while promoting training for professional development.",
-      "Coordinated the course groups, addressing student issues and managing team allocation.",
-      "Established the student data tracking system, facilitating progress monitoring.",
+      "Coordinated course groups, addressing student issues and managing team allocation.",
+      "Established student data tracking system, facilitating progress monitoring.",
       "Created and coordinated the content team, where I scripted and produced videos for Instagram and YouTube in collaboration with the marketing team.",
-      "Organized and hosted the LabeCast, the school’s podcast, sharing knowledge with the community."
+      "Organized and hosted LabeCast, the school’s podcast, sharing knowledge with the community."
     ],
     technologies: [
       "HTML",
@@ -75,9 +75,9 @@ export const experiences: Experience[] = [
     endDate: "Sep 2022",
     tasks: [
       "Developed the no-code app creation platform using React, React Native, and Node.js.",
-      "Participated in the product conception alongside the other co-founders of the company.",
-      "Led marketing initiatives and content creation to promote the product.",
-      "Created video tutorials on YouTube to demonstrate the platform's features and teach users how to make the most of it."
+      "Participated in product conceptualization alongside other co-founders of the company.",
+      "Led marketing initiatives and content creation to promote product.",
+      "Created video tutorials on YouTube to demonstrate platform features and teach users how to make the most of it."
     ],
     technologies: [
       "JavaScript",
@@ -103,11 +103,11 @@ export const experiences: Experience[] = [
     endDate: "Sep 2020",
     tasks: [
       "Developed over 20 applications in areas such as e-commerce, social networks and digital medical records.",
-      "Collaborated with the design team to create an internal Design System that accelerated product development.",
+      "Collaborated with design team to create an internal Design System that accelerated product development.",
       "Performed maintenance on applications and websites, fixing bugs and implementing new features to enhance user experience.",
-      "Led the React Chapter, facilitating meetings to discuss best practices and insights among React and React Native developers.",
-      "Coordinated the presentations for the company's weekly meetings, sharing relevant information with the entire team.",
-      "Structured the standardization of the company's documentation, increasing developer engagement and facilitating the onboarding of new team members."
+      "Led React Guild, facilitating meetings to discuss best practices and insights among React and React Native developers.",
+      "Coordinated presentations for the company's weekly meetings, sharing relevant information with the entire team.",
+      "Structured standardization of company documentation, increasing developer engagement and facilitating onboarding of new team members."
     ],
     technologies: [
       "JavaScript",

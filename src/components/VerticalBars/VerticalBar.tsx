@@ -27,11 +27,11 @@ const MainContainer = styled.div<{ $side: string }>`
   position: fixed;
   ${(props) => `${props.$side}: 50px;`}
   bottom: 0;
-  gap: 30px;
+  gap: 28px;
   width: 24px;
 `
 const Line = styled.div`
-  height: 150px;
+  height: 100px;
   width: 2px;
   background-color: ${colors.textRegular};
   @media (max-height: 500px) {

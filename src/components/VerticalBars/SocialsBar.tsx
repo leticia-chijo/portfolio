@@ -6,7 +6,7 @@ import colors from "../../constants/colors"
 import styled from "styled-components"
 
 export default function SocialsBar() {
-  const iconsSize = 26
+  const iconsSize = 32
   
   return (
     <>

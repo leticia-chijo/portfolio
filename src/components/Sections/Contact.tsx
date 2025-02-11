@@ -7,8 +7,8 @@ export default function Contact() {
   return (
     <MainContainer>
       <p>
-        I am currently <strong>looking for any new opportunities</strong>, so my inbox is always open. Whether you have
-        a question or just want to say hi, I'll try my best to get back to you as soon as possible!
+        I am currently <strong>looking for new opportunities</strong>, so my inbox is always open. Whether you have
+        an offer, a question or just want to say hi, I'll try my best to get back to you as soon as possible!
       </p>
       <PopButton onClick={() => (window.location.href = `mailto:${EMAIL}`)}>
         <div>Say Hello!</div>
